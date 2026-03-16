@@ -491,6 +491,32 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{max-width:100%}
 .f-col a:hover{color:var(--blue)}
 .footer-bottom{border-top:1px solid var(--g200);margin-top:28px;padding-top:18px;text-align:center;font-size:.79rem;color:var(--tl)}
 
+     ==================================================== -->
+
+.course-tool-tag {
+  padding: 5px 12px;
+  background: rgba(26,115,232,.07);
+  border: 1px solid rgba(26,115,232,.18);
+  border-radius: 50px;
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--blue);
+}
+.course-detail-hero {
+  flex-wrap: wrap;
+}
+@media(max-width:680px){
+  .course-detail-hero {
+    grid-template-columns: 1fr !important;
+  }
+  .course-detail-hero > div:last-child {
+    flex-direction: row !important;
+  }
+}
+
+
+<!-- ====================================================
+     JAVASCRIPT — Add these functions to your existing <script> block
 /* ANIMATIONS */
 .fade-in{opacity:0;transform:translateY(18px);transition:.6s ease}
 .fade-in.visible{opacity:1;transform:none}
@@ -912,38 +938,1068 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{max-width:100%}
 <!-- =============================== -->
 <div class="page" id="page-courses">
 <div class="container">
-<div class="cp-hdr">
-<div class="breadcrumb"><a href="#" onclick="showPage('home')">Home</a> <span>›</span> All Courses</div>
-<h1>All Courses — Choose Your Path</h1>
-<p>4 specialized real-time project-based programs • 100% Placement Assurance • Live Online Training</p>
-</div>
-<div class="cat-pills">
-<span class="cat-pill active" onclick="filterCat(this,'all')">All Courses</span>
-<span class="cat-pill" onclick="filterCat(this,'devops')">DevOps</span>
-<span class="cat-pill" onclick="filterCat(this,'cloud')">Cloud Computing</span>
-<span class="cat-pill" onclick="filterCat(this,'devsecops')">DevSecOps</span>
-<span class="cat-pill" onclick="filterCat(this,'sre')">SRE</span>
-</div>
-<p style="font-size:.86rem;color:var(--tl);padding:8px 0">All courses include: ✅ Live Classes &nbsp;·&nbsp; ✅ 24x7 Support &nbsp;·&nbsp; ✅ Placement Assurance &nbsp;·&nbsp; ✅ For 🇦🇺🇺🇸🇨🇦🇸🇬🇩🇪🇮🇳</p>
-<div class="courses-grid">
-<div class="cl-card" onclick="showPage('home')"><div class="cl-top"><span class="cl-badge" style="background:rgba(0,201,167,.1);color:#00a98c">MOST POPULAR</span><h3>Multi-Cloud Engineering Program (AWS + Azure + GCP)</h3><p>Master all three major cloud platforms. Deploy production infrastructure across AWS, Azure &amp; GCP with Terraform.</p><div class="cl-tags"><span>AWS</span><span>Azure</span><span>GCP</span><span>Terraform</span><span>CloudFormation</span></div></div><div class="cl-bottom"><span class="cl-stat">⭐ <span class="v">4.9</span></span><span class="cl-stat"><span class="v">12</span> Weeks</span><span class="cl-stat"><span class="v">5+</span> Projects</span><span style="color:var(--blue);font-weight:700;font-size:.82rem">View Details →</span></div></div>
-<div class="cl-card" onclick="showPage('home')"><div class="cl-top"><span class="cl-badge" style="background:rgba(131,56,236,.1);color:#8338ec">ROLE-BASED</span><h3>DevOps Engineering — Complete Program</h3><p>End-to-end DevOps mastery. CI/CD, Docker, K8s, Jenkins, ArgoCD, monitoring — real production deployment.</p><div class="cl-tags"><span>Docker</span><span>Kubernetes</span><span>Jenkins</span><span>ArgoCD</span><span>GitOps</span></div></div><div class="cl-bottom"><span class="cl-stat">⭐ <span class="v">4.9</span></span><span class="cl-stat"><span class="v">12</span> Weeks</span><span class="cl-stat"><span class="v">5+</span> Projects</span><span style="color:var(--blue);font-weight:700;font-size:.82rem">View Details →</span></div></div>
-<div class="cl-card" onclick="showPage('home')"><div class="cl-top"><span class="cl-badge" style="background:rgba(255,107,53,.1);color:var(--orange)">CERTIFICATION</span><h3>DevSecOps — Security Engineering Program</h3><p>Security in every SDLC phase. SAST, DAST, container security, compliance-as-code — build secure pipelines.</p><div class="cl-tags"><span>SonarQube</span><span>Trivy</span><span>OWASP</span><span>Vault</span><span>Snyk</span></div></div><div class="cl-bottom"><span class="cl-stat">⭐ <span class="v">4.8</span></span><span class="cl-stat"><span class="v">10</span> Weeks</span><span class="cl-stat"><span class="v">4+</span> Projects</span><span style="color:var(--blue);font-weight:700;font-size:.82rem">View Details →</span></div></div>
-<div class="cl-card" onclick="showPage('home')"><div class="cl-top"><span class="cl-badge" style="background:rgba(255,209,102,.15);color:#d4a017">ADVANCED</span><h3>SRE — Site Reliability Engineering</h3><p>Operate at scale. SLOs, error budgets, incident management, chaos engineering — production resilience.</p><div class="cl-tags"><span>Prometheus</span><span>Grafana</span><span>PagerDuty</span><span>Chaos Eng</span><span>SLO/SLI</span></div></div><div class="cl-bottom"><span class="cl-stat">⭐ <span class="v">4.8</span></span><span class="cl-stat"><span class="v">8</span> Weeks</span><span class="cl-stat"><span class="v">3+</span> Projects</span><span style="color:var(--blue);font-weight:700;font-size:.82rem">View Details →</span></div></div>
-</div>
-<div class="cta-banner" style="border-radius:var(--r);margin-bottom:40px">
-<div style="padding:40px 20px">
-<h2 style="font-size:1.6rem">Not sure which course to choose?</h2>
-<p>Talk to our training advisor — free 30-minute consultation call</p>
-<div class="cta-banner-btns">
-<a href="https://wa.me/917993822600?text=Hi, I need help choosing the right course" target="_blank" class="cta-btn-w" style="display:inline-block">💬 Chat with Advisor</a>
-<a href="tel:+917993822600" class="cta-btn-g" style="display:inline-block">📞 Call +91 7993 822600</a>
-</div>
-</div>
-</div>
-</div>
-</div>
+  <div class="cp-hdr">
+    <div class="breadcrumb"><a href="#" onclick="showPage('home')">Home</a> <span>›</span> All Courses</div>
+    <h1>All Courses — Choose Your Path</h1>
+    <p>4 specialized real-time project-based programs • 100% Placement Assurance • Live Online Training</p>
+  </div>
 
+  <!-- CATEGORY TABS -->
+  <div class="cat-pills">
+    <span class="cat-pill active" onclick="showCourseTab('all',this)">All Courses</span>
+    <span class="cat-pill" onclick="showCourseTab('devops',this)">DevOps</span>
+    <span class="cat-pill" onclick="showCourseTab('cloud',this)">Cloud Computing</span>
+    <span class="cat-pill" onclick="showCourseTab('devsecops',this)">DevSecOps</span>
+    <span class="cat-pill" onclick="showCourseTab('sre',this)">SRE</span>
+  </div>
+  <p style="font-size:.86rem;color:var(--tl);padding:8px 0">All courses include: ✅ Live Classes &nbsp;·&nbsp; ✅ 24x7 Support &nbsp;·&nbsp; ✅ Placement Assurance &nbsp;·&nbsp; ✅ For 🇦🇺🇺🇸🇨🇦🇸🇬🇩🇪🇮🇳</p>
+
+  <!-- ===================== ALL COURSES TAB ===================== -->
+  <div id="ctab-all" class="course-tab-content">
+    <div class="courses-grid">
+      <div class="cl-card" onclick="showCourseTab('devops', null)">
+        <div class="cl-top">
+          <span class="cl-badge" style="background:rgba(26,115,232,.1);color:var(--blue)">MOST POPULAR</span>
+          <h3>DevOps Engineering — Complete Program</h3>
+          <p>End-to-end DevOps mastery. CI/CD, Docker, K8s, Jenkins, ArgoCD, monitoring — real production deployment.</p>
+          <div class="cl-tags"><span>Docker</span><span>Kubernetes</span><span>Jenkins</span><span>ArgoCD</span><span>GitOps</span></div>
+        </div>
+        <div class="cl-bottom">
+          <span class="cl-stat">⭐ <span class="v">4.9</span></span>
+          <span class="cl-stat"><span class="v">12</span> Weeks</span>
+          <span class="cl-stat"><span class="v">5+</span> Projects</span>
+          <span style="color:var(--blue);font-weight:700;font-size:.82rem">View Curriculum →</span>
+        </div>
+      </div>
+
+      <div class="cl-card" onclick="showCourseTab('cloud', null)">
+        <div class="cl-top">
+          <span class="cl-badge" style="background:rgba(0,201,167,.1);color:#00a98c">MULTI-CLOUD</span>
+          <h3>Multi-Cloud Engineering Program (AWS + Azure + GCP)</h3>
+          <p>Master all three major cloud platforms. Deploy production infrastructure across AWS, Azure &amp; GCP with Terraform.</p>
+          <div class="cl-tags"><span>AWS</span><span>Azure</span><span>GCP</span><span>Terraform</span><span>CloudFormation</span></div>
+        </div>
+        <div class="cl-bottom">
+          <span class="cl-stat">⭐ <span class="v">4.9</span></span>
+          <span class="cl-stat"><span class="v">12</span> Weeks</span>
+          <span class="cl-stat"><span class="v">5+</span> Projects</span>
+          <span style="color:var(--blue);font-weight:700;font-size:.82rem">View Curriculum →</span>
+        </div>
+      </div>
+
+      <div class="cl-card" onclick="showCourseTab('devsecops', null)">
+        <div class="cl-top">
+          <span class="cl-badge" style="background:rgba(255,107,53,.1);color:var(--orange)">CERTIFICATION</span>
+          <h3>DevSecOps — Security Engineering Program</h3>
+          <p>Security in every SDLC phase. SAST, DAST, container security, compliance-as-code — build secure pipelines.</p>
+          <div class="cl-tags"><span>SonarQube</span><span>Trivy</span><span>OWASP</span><span>Vault</span><span>Snyk</span></div>
+        </div>
+        <div class="cl-bottom">
+          <span class="cl-stat">⭐ <span class="v">4.8</span></span>
+          <span class="cl-stat"><span class="v">10</span> Weeks</span>
+          <span class="cl-stat"><span class="v">4+</span> Projects</span>
+          <span style="color:var(--blue);font-weight:700;font-size:.82rem">View Curriculum →</span>
+        </div>
+      </div>
+
+      <div class="cl-card" onclick="showCourseTab('sre', null)">
+        <div class="cl-top">
+          <span class="cl-badge" style="background:rgba(255,209,102,.15);color:#d4a017">ADVANCED</span>
+          <h3>SRE — Site Reliability Engineering</h3>
+          <p>Operate at scale. SLOs, error budgets, incident management, chaos engineering — production resilience.</p>
+          <div class="cl-tags"><span>Prometheus</span><span>Grafana</span><span>PagerDuty</span><span>Chaos Eng</span><span>SLO/SLI</span></div>
+        </div>
+        <div class="cl-bottom">
+          <span class="cl-stat">⭐ <span class="v">4.8</span></span>
+          <span class="cl-stat"><span class="v">8</span> Weeks</span>
+          <span class="cl-stat"><span class="v">3+</span> Projects</span>
+          <span style="color:var(--blue);font-weight:700;font-size:.82rem">View Curriculum →</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-banner" style="border-radius:var(--r);margin-bottom:40px">
+      <div style="padding:40px 20px">
+        <h2 style="font-size:1.6rem">Not sure which course to choose?</h2>
+        <p>Talk to our training advisor — free 30-minute consultation call</p>
+        <div class="cta-banner-btns">
+          <a href="https://wa.me/917993822600?text=Hi, I need help choosing the right course" target="_blank" class="cta-btn-w" style="display:inline-block">💬 Chat with Advisor</a>
+          <a href="tel:+917993822600" class="cta-btn-g" style="display:inline-block">📞 Call +91 7993 822600</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== DEVOPS TAB ===================== -->
+  <div id="ctab-devops" class="course-tab-content" style="display:none">
+    <div class="course-detail-hero" style="background:linear-gradient(135deg,#0b1930,#1a73e8);border-radius:var(--r);padding:32px;color:#fff;margin-bottom:28px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center">
+      <div>
+        <span style="background:rgba(255,255,255,.15);color:#fff;padding:3px 12px;border-radius:4px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px">Most Popular</span>
+        <h2 style="font-family:'Outfit';font-size:1.7rem;font-weight:900;margin:10px 0 8px">DevOps Engineering — Complete Program</h2>
+        <p style="opacity:.85;font-size:.95rem;margin-bottom:14px">End-to-end DevOps mastery with real production deployments. From Git to production CI/CD pipelines on AWS.</p>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;font-size:.84rem">
+          <span>⭐ <strong>4.9/5</strong></span>
+          <span>🕐 <strong>12 Weeks · 75+ Hours</strong></span>
+          <span>🚀 <strong>5 Real Projects</strong></span>
+          <span>🎓 <strong>3 Certificates</strong></span>
+          <span>💰 <strong>₹80,000</strong></span>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;min-width:180px">
+        <button onclick="openCourseDownload('devops')" style="padding:12px 20px;background:#fff;color:var(--navy);border:none;border-radius:6px;font-family:'Outfit';font-weight:700;font-size:.9rem;cursor:pointer">📄 Download Curriculum</button>
+        <button onclick="openCourseEnroll('DevOps Engineering')" style="padding:12px 20px;background:var(--red);color:#fff;border:none;border-radius:6px;font-family:'Outfit';font-weight:700;font-size:.9rem;cursor:pointer">🚀 Enroll Now</button>
+      </div>
+    </div>
+
+    <!-- Tools -->
+    <div style="background:var(--g50);border:1px solid var(--g200);border-radius:var(--r);padding:24px;margin-bottom:24px">
+      <h3 style="font-family:'Outfit';font-weight:700;color:var(--td);margin-bottom:16px">🛠 Tools You Will Master</h3>
+      <div style="display:flex;flex-wrap:wrap;gap:10px">
+        <span class="course-tool-tag">Git / GitHub / GitLab</span><span class="course-tool-tag">Docker</span><span class="course-tool-tag">Kubernetes (EKS)</span>
+        <span class="course-tool-tag">Helm</span><span class="course-tool-tag">Jenkins</span><span class="course-tool-tag">GitHub Actions</span>
+        <span class="course-tool-tag">ArgoCD</span><span class="course-tool-tag">Terraform</span><span class="course-tool-tag">Ansible</span>
+        <span class="course-tool-tag">AWS (EC2, EKS, S3, RDS)</span><span class="course-tool-tag">Prometheus</span><span class="course-tool-tag">Grafana</span>
+        <span class="course-tool-tag">ELK Stack</span><span class="course-tool-tag">SonarQube</span><span class="course-tool-tag">Trivy</span>
+      </div>
+    </div>
+
+    <!-- Curriculum Modules -->
+    <h3 style="font-family:'Outfit';font-size:1.2rem;font-weight:800;color:var(--td);margin-bottom:16px">📚 Complete Curriculum — 9 Modules</h3>
+
+    <div class="mod-item open">
+      <div class="mod-hdr" onclick="togMod(this)">
+        <div class="mod-hdr-l"><span class="mod-num">Module 1:</span><h4>DevOps Fundamentals, Culture &amp; Linux Essentials</h4></div>
+        <div class="mod-meta"><span>9 Topics</span><span class="mod-arrow">▾</span></div>
+      </div>
+      <div class="mod-body"><div class="mod-content">
+        <div class="mod-topics"><h5>📋 Topics</h5><ul>
+          <li>Introduction to DevOps: History &amp; Benefits</li>
+          <li>DevOps Culture, Practices &amp; Core Principles</li>
+          <li>DevOps Lifecycle vs SDLC</li>
+          <li>Agile, Lean &amp; DevOps Integration</li>
+          <li>DORA Metrics, Lead Time, MTTR</li>
+          <li>DevOps Transformation Roadmap</li>
+          <li>AI in DevOps: Overview &amp; Use Cases</li>
+          <li>Essential Linux Commands for DevOps</li>
+          <li>Shell Scripting Basics for Automation</li>
+        </ul></div>
+        <div class="mod-hands"><h5>✅ Hands-on</h5><ul>
+          <li>Set up DevOps learning environment</li>
+          <li>Create DevOps maturity assessment</li>
+          <li>Design a transformation roadmap</li>
+          <li>Calculate and analyze DORA metrics</li>
+          <li>Practice essential Linux commands</li>
+        </ul></div>
+      </div></div>
+    </div>
+
+    <div class="mod-item">
+      <div class="mod-hdr" onclick="togMod(this)">
+        <div class="mod-hdr-l"><span class="mod-num">Module 2:</span><h4>Version Control — Git, GitHub &amp; GitLab</h4></div>
+        <div class="mod-meta"><span>7 Topics</span><span class="mod-arrow">▾</span></div>
+      </div>
+      <div class="mod-body"><div class="mod-content">
+        <div class="mod-topics"><h5>📋 Topics</h5><ul>
+          <li>Git fundamentals — init, commit, branching, merging</li>
+          <li>GitHub/GitLab workflows &amp; pull requests</li>
+          <li>Monorepo vs multi-repo architecture</li>
+          <li>Git hooks, protected branches &amp; code review</li>
+          <li>Branching strategies: GitFlow, Trunk-based</li>
+          <li>Conflict resolution &amp; advanced Git commands</li>
+          <li>Repository security &amp; access management</li>
+        </ul></div>
+        <div class="mod-hands"><h5>✅ Hands-on</h5><ul>
+          <li>Set up multi-branch workflow</li>
+          <li>Configure branch protection rules</li>
+          <li>Implement GitFlow on real project</li>
+          <li>Create &amp; manage pull requests</li>
+        </ul></div>
+      </div></div>
+    </div>
+
+    <div class="mod-item">
+      <div class="mod-hdr" onclick="togMod(this)">
+        <div class="mod-hdr-l"><span class="mod-num">Module 3:</span><h4>Docker &amp; Containerization</h4></div>
+        <div class="mod-meta"><span>8 Topics</span><span class="mod-arrow">▾</span></div>
+      </div>
+      <div class="mod-body"><div class="mod-content">
+        <div class="mod-topics"><h5>📋 Topics</h5><ul>
+          <li>Docker architecture &amp; container lifecycle</li>
+          <li>Dockerfile best practices &amp; multi-stage builds</li>
+          <li>Docker networking, volumes &amp; Compose</li>
+          <li>Container registry management (ECR, Docker Hub)</li>
+          <li>Docker security &amp; image scanning with Trivy</li>
+          <li>Optimizing image sizes — from 1GB to &lt;100MB</li>
+          <li>Docker Swarm basics vs Kubernetes</li>
+          <li>Containerizing real applications (Node.js, Java)</li>
+        </ul></div>
+        <div class="mod-hands"><h5>✅ Hands-on</h5><ul>
+          <li>Containerize full-stack application</li>
+          <li>Build optimized multi-stage images</li>
+          <li>Docker Compose for microservices</li>
+          <li>Push to AWS ECR registry</li>
+        </ul></div>
+      </div></div>
+    </div>
+
+    <div class="mod-item">
+      <div class="mod-hdr" onclick="togMod(this)">
+        <div class="mod-hdr-l"><span class="mod-num">Module 4:</span><h4>Kubernetes &amp; Container Orchestration</h4></div>
+        <div class="mod-meta"><span>10 Topics</span><span class="mod-arrow">▾</span></div>
+      </div>
+      <div class="mod-body"><div class="mod-content">
+        <div class="mod-topics"><h5>📋 Topics</h5><ul>
+          <li>K8s architecture — control plane &amp; worker nodes</li>
+          <li>Pods, Deployments, StatefulSets, DaemonSets</li>
+          <li>Services, Ingress, Network Policies</li>
+          <li>ConfigMaps, Secrets, RBAC</li>
+          <li>Helm charts &amp; package management</li>
+          <li>EKS cluster setup &amp; node groups</li>
+          <li>Persistent Volumes &amp; Storage Classes</li>
+          <li>HPA &amp; VPA auto-scaling</li>
+          <li>K8s troubleshooting &amp; debugging</li>
+          <li>Cluster upgrades &amp; maintenance</li>
+        </ul></div>
+        <div class="mod-hands"><h5>✅ Hands-on</h5><ul>
+          <li>Deploy app on EKS cluster</li>
+          <li>Configure Ingress with TLS</li>
+          <li>Implement RBAC &amp; create Helm charts</li>
+          <li>Set up HPA auto-scaling policies</li>
+        </ul></div>
+      </div></div>
+    </div>
+
+    <div class="mod-item">
+      <div class="mod-hdr" onclick="togMod(this)">
+        <div class="mod-hdr-l"><span class="mod-num">Module 5:</span><h4>CI/CD Pipelines — Jenkins &amp; GitHub Actions</h4></div>
+        <div class="mod-meta"><span>8 Topics</span><span class="mod-arrow">▾</span></div>
+      </div>
+      <div class="mod-body"><div class="mod-content">
+        <div class="mod-topics"><h5>📋 Topics</h5><ul>
+          <li>CI/CD concepts &amp; pipeline architecture</li>
+          <li>Jenkins — setup, plugins, pipeline-as-code</li>
+          <li>Jenkinsfile — declarative vs scripted</li>
+          <li>GitHub Actions — workflows, triggers, secrets</li>
+          <li>Artifact management with Nexus/JFrog</li>
+          <li>Environment promotion strategies</li>
+          <li>Pipeline security &amp; secret management</li>
+          <li>Multi-environment deployments</li>
+        </ul></div>
+        <div class="mod-hands"><h5>✅ Hands-on</h5><ul>
+          <li>Build end-to-end Jenkins pipeline</li>
+          <li>GitHub Actions CI/CD workflow</li>
+          <li>Integrate build, test, scan, deploy</li>
+          <li>Environment-based deployment gates</li>
+        </ul></div>
+      </div></div>
+    </div>
+
+    <div class="mod-item">
+      <div class="mod-hdr" onclick="togMod(this)">
+        <div class="mod-hdr-l"><span class="mod-num">Module 6:</span><h4>GitOps &amp; ArgoCD</h4></div>
+        <div class="mod-meta"><span>6 Topics</span><span class="mod-arrow">▾</span></div>
+      </div>
+      <div class="mod-body"><div class="mod-content">
+        <div class="mod-topics"><h5>📋 Topics</h5><ul>
+          <li>GitOps principles &amp; deployment model</li>
+          <li>ArgoCD installation &amp; configuration on EKS</li>
+          <li>Application sync &amp; self-healing</li>
+          <li>Blue-green, canary &amp; rolling deployments</li>
+          <li>Multi-cluster management with ArgoCD</li>
+          <li>Rollback strategies &amp; drift detection</li>
+        </ul></div>
+        <div class="mod-hands"><h5>✅ Hands-on</h5><ul>
+          <li>Deploy with ArgoCD GitOps model</li>
+          <li>Implement blue-green deployment</li>
+          <li>Configure auto-sync &amp; self-healing</li>
+          <li>Set up canary deployment</li>
+        </ul></div>
+      </div></div>
+    </div>
+
+    <div class="mod-item">
+      <div class="mod-hdr" onclick="togMod(this)">
+        <div class="mod-hdr-l"><span class="mod-num">Module 7:</span><h4>Infrastructure as Code — Terraform &amp; Ansible</h4></div>
+        <div class="mod-meta"><span>8 Topics</span><span class="mod-arrow">▾</span></div>
+      </div>
+      <div class="mod-body"><div class="mod-content">
+        <div class="mod-topics"><h5>📋 Topics</h5><ul>
+          <li>Terraform fundamentals — providers, resources, modules</li>
+          <li>Terraform state management — S3 backend, DynamoDB locking</li>
+          <li>Terraform workspace strategy for environments</li>
+          <li>Reusable Terraform modules</li>
+          <li>Ansible — inventory, playbooks, roles</li>
+          <li>Ansible for server configuration management</li>
+          <li>Terraform + Ansible combined workflows</li>
+          <li>IaC testing &amp; validation</li>
+        </ul></div>
+        <div class="mod-hands"><h5>✅ Hands-on</h5><ul>
+          <li>Provision AWS VPC + EKS with Terraform</li>
+          <li>Set up S3 remote state backend</li>
+          <li>Write Ansible playbooks for server setup</li>
+          <li>Multi-environment IaC deployment</li>
+        </ul></div>
+      </div></div>
+    </div>
+
+    <div class="mod-item">
+      <div class="mod-hdr" onclick="togMod(this)">
+        <div class="mod-hdr-l"><span class="mod-num">Module 8:</span><h4>Monitoring &amp; Observability</h4></div>
+        <div class="mod-meta"><span>7 Topics</span><span class="mod-arrow">▾</span></div>
+      </div>
+      <div class="mod-body"><div class="mod-content">
+        <div class="mod-topics"><h5>📋 Topics</h5><ul>
+          <li>Prometheus — metrics, scraping, PromQL</li>
+          <li>Grafana — dashboards, alerting, panels</li>
+          <li>ELK Stack — log aggregation &amp; analysis</li>
+          <li>Kubernetes cluster monitoring</li>
+          <li>Application performance monitoring</li>
+          <li>Alert routing with PagerDuty / Slack</li>
+          <li>AIOps &amp; intelligent anomaly detection</li>
+        </ul></div>
+        <div class="mod-hands"><h5>✅ Hands-on</h5><ul>
+          <li>Deploy Prometheus + Grafana stack on K8s</li>
+          <li>Create production dashboards</li>
+          <li>Configure alerting rules &amp; routing</li>
+          <li>Set up centralized log aggregation</li>
+        </ul></div>
+      </div></div>
+    </div>
+
+    <div class="mod-item">
+      <div class="mod-hdr" onclick="togMod(this)">
+        <div class="mod-hdr-l"><span class="mod-num">Module 9:</span><h4>🏆 Capstone — Full Production Deployment Project</h4></div>
+        <div class="mod-meta"><span>End-to-End</span><span class="mod-arrow">▾</span></div>
+      </div>
+      <div class="mod-body"><div class="mod-content">
+        <div class="mod-topics"><h5>📋 Project</h5><ul>
+          <li>Real app — code to production on AWS EKS</li>
+          <li>Full CI/CD pipeline with GitHub Actions + ArgoCD</li>
+          <li>Terraform IaC for all infrastructure</li>
+          <li>Helm chart deployment with auto-scaling</li>
+          <li>Prometheus + Grafana monitoring stack</li>
+        </ul></div>
+        <div class="mod-hands"><h5>✅ Deliverables</h5><ul>
+          <li>Working production app on AWS EKS</li>
+          <li>Automated CI/CD pipeline</li>
+          <li>Complete Terraform codebase</li>
+          <li>Monitoring dashboards &amp; alerts</li>
+          <li>Full project documentation</li>
+        </ul></div>
+      </div></div>
+    </div>
+
+    <div style="margin-top:24px;padding:24px;background:linear-gradient(135deg,rgba(26,115,232,.06),rgba(0,201,167,.06));border:1px solid rgba(26,115,232,.2);border-radius:var(--r);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
+      <div>
+        <div style="font-family:'Outfit';font-weight:800;font-size:1.1rem;color:var(--td);margin-bottom:4px">DevOps Engineering Program — ₹80,000</div>
+        <div style="font-size:.87rem;color:var(--tl)">12 Weeks · 9 Modules · 75+ Hours · 5 Projects · 100% Placement Assurance</div>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <button onclick="openCourseDownload('devops')" style="padding:11px 22px;background:var(--w);border:2px solid var(--blue);color:var(--blue);border-radius:6px;font-family:'Outfit';font-weight:700;cursor:pointer">📄 Download Full Syllabus</button>
+        <button onclick="openCourseEnroll('DevOps Engineering')" style="padding:11px 22px;background:var(--red);border:none;color:#fff;border-radius:6px;font-family:'Outfit';font-weight:700;cursor:pointer">🚀 Enroll Now</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== CLOUD COMPUTING TAB ===================== -->
+  <div id="ctab-cloud" class="course-tab-content" style="display:none">
+    <div class="course-detail-hero" style="background:linear-gradient(135deg,#1a1a00,#ff6600,#ff9900);border-radius:var(--r);padding:32px;color:#fff;margin-bottom:28px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center">
+      <div>
+        <span style="background:rgba(255,255,255,.15);color:#fff;padding:3px 12px;border-radius:4px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px">Multi-Cloud</span>
+        <h2 style="font-family:'Outfit';font-size:1.7rem;font-weight:900;margin:10px 0 8px">Multi-Cloud Engineering (AWS + Azure + GCP)</h2>
+        <p style="opacity:.85;font-size:.95rem;margin-bottom:14px">Master all three major cloud platforms. Deploy production infrastructure across AWS, Azure &amp; GCP with Terraform — the most in-demand skill in 2026.</p>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;font-size:.84rem">
+          <span>⭐ <strong>4.9/5</strong></span>
+          <span>🕐 <strong>12 Weeks · 80+ Hours</strong></span>
+          <span>🚀 <strong>5 Real Projects</strong></span>
+          <span>🎓 <strong>3 Certificates</strong></span>
+          <span>💰 <strong>₹80,000</strong></span>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;min-width:180px">
+        <button onclick="openCourseDownload('multicloud')" style="padding:12px 20px;background:#fff;color:var(--navy);border:none;border-radius:6px;font-family:'Outfit';font-weight:700;font-size:.9rem;cursor:pointer">📄 Download Curriculum</button>
+        <button onclick="openCourseEnroll('Multi-Cloud Engineering (AWS+Azure+GCP)')" style="padding:12px 20px;background:var(--red);color:#fff;border:none;border-radius:6px;font-family:'Outfit';font-weight:700;font-size:.9rem;cursor:pointer">🚀 Enroll Now</button>
+      </div>
+    </div>
+
+    <div style="background:var(--g50);border:1px solid var(--g200);border-radius:var(--r);padding:24px;margin-bottom:24px">
+      <h3 style="font-family:'Outfit';font-weight:700;color:var(--td);margin-bottom:16px">☁️ Cloud Platforms &amp; Tools Covered</h3>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+        <div style="background:#fff;border:2px solid #ff9900;border-radius:var(--rs);padding:14px;text-align:center">
+          <div style="font-size:1.5rem;margin-bottom:6px">☁️</div>
+          <div style="font-family:'Outfit';font-weight:800;color:#ff6600;margin-bottom:8px">AWS</div>
+          <div style="font-size:.78rem;color:var(--tb);line-height:1.7">EC2 · VPC · S3 · RDS<br>EKS · Lambda · IAM<br>CloudWatch · Route53<br>CloudFormation · ECR</div>
+        </div>
+        <div style="background:#fff;border:2px solid #0078d4;border-radius:var(--rs);padding:14px;text-align:center">
+          <div style="font-size:1.5rem;margin-bottom:6px">🔷</div>
+          <div style="font-family:'Outfit';font-weight:800;color:#0078d4;margin-bottom:8px">Azure</div>
+          <div style="font-size:.78rem;color:var(--tb);line-height:1.7">VMs · AKS · App Service<br>Azure DevOps · AD<br>Monitor · Blob Storage<br>Functions · ACR</div>
+        </div>
+        <div style="background:#fff;border:2px solid #4285f4;border-radius:var(--rs);padding:14px;text-align:center">
+          <div style="font-size:1.5rem;margin-bottom:6px">🟢</div>
+          <div style="font-family:'Outfit';font-weight:800;color:#4285f4;margin-bottom:8px">GCP</div>
+          <div style="font-size:.78rem;color:var(--tb);line-height:1.7">GKE · Compute Engine<br>Cloud Functions · GCS<br>Cloud Run · BigQuery<br>Cloud Build · GCR</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="font-family:'Outfit';font-size:1.2rem;font-weight:800;color:var(--td);margin-bottom:16px">📚 Complete Curriculum — 10 Modules</h3>
+
+    <div class="mod-item open">
+      <div class="mod-hdr" onclick="togMod(this)"><div class="mod-hdr-l"><span class="mod-num">Module 1:</span><h4>Cloud Fundamentals &amp; Architecture Principles</h4></div><div class="mod-meta"><span>8 Topics</span><span class="mod-arrow">▾</span></div></div>
+      <div class="mod-body"><div class="mod-content">
+        <div class="mod-topics"><h5>📋 Topics</h5><ul>
+          <li>Cloud computing models — IaaS, PaaS, SaaS</li>
+          <li>Public, private &amp; hybrid cloud architecture</li>
+          <li>Cloud-native design principles</li>
+          <li>Multi-cloud strategy &amp; patterns</li>
+          <li>FinOps &amp; cloud cost optimization</li>
+          <li>Cloud security fundamentals &amp; shared responsibility</li>
+          <li>Well-architected framework comparison (AWS/Azure/GCP)</li>
+          <li>Cloud migration strategies (6 Rs)</li>
+        </ul></div>
+        <div class="mod-hands"><h5>✅ Hands-on</h5><ul>
+          <li>Set up accounts on all 3 clouds</li>
+          <li>Configure billing alerts &amp; budgets</li>
+          <li>Cloud pricing calculator comparison</li>
+          <li>Architecture review exercise</li>
+        </ul></div>
+      </div></div>
+    </div>
+
+    <div class="mod-item">
+      <div class="mod-hdr" onclick="togMod(this)"><div class="mod-hdr-l"><span class="mod-num">Module 2:</span><h4>AWS Deep Dive — Core Services</h4></div><div class="mod-meta"><span>12 Topics</span><span class="mod-arrow">▾</span></div></div>
+      <div class="mod-body"><div class="mod-content">
+        <div class="mod-topics"><h5>📋 Topics</h5><ul>
+          <li>VPC — subnets, route tables, NAT, security groups, NACLs</li>
+          <li>EC2 — instance types, AMIs, Auto Scaling Groups, Load Balancers</li>
+          <li>IAM — users, roles, policies, STS, cross-account access</li>
+          <li>S3 — buckets, versioning, lifecycle, encryption, policies</li>
+          <li>RDS &amp; Aurora — multi-AZ, read replicas, backups</li>
+          <li>EKS — cluster setup, node groups, Fargate profiles</li>
+          <li>Lambda — serverless functions, triggers, layers</li>
+          <li>CloudWatch — metrics, logs, dashboards, alarms</li>
+          <li>Route53 — DNS, routing policies, health checks</li>
+          <li>CloudFront — CDN, distribution, caching</li>
+          <li>Secrets Manager &amp; Parameter Store</li>
+          <li>AWS Cost Explorer &amp; Savings Plans</li>
+        </ul></div>
+        <div class="mod-hands"><h5>✅ Hands-on</h5><ul>
+          <li>Build production-grade VPC from scratch</li>
+          <li>Deploy multi-tier app on EC2 + RDS</li>
+          <li>Set up EKS cluster with node groups</li>
+          <li>Configure CloudWatch alerts &amp; dashboards</li>
+        </ul></div>
+      </div></div>
+    </div>
+
+    <div class="mod-item">
+      <div class="mod-hdr" onclick="togMod(this)"><div class="mod-hdr-l"><span class="mod-num">Module 3:</span><h4>Azure Deep Dive — Core Services</h4></div><div class="mod-meta"><span>10 Topics</span><span class="mod-arrow">▾</span></div></div>
+      <div class="mod-body"><div class="mod-content">
+        <div class="mod-topics"><h5>📋 Topics</h5><ul>
+          <li>Azure VNet, subnets, NSGs, Azure Firewall</li>
+          <li>Azure VMs, VM Scale Sets, Availability Zones</li>
+          <li>Azure Active Directory — users, groups, RBAC, SSO</li>
+          <li>Azure Blob Storage, Files, Queue</li>
+          <li>Azure SQL Database &amp; Cosmos DB</li>
+          <li>AKS — cluster creation, upgrades, ACR integration</li>
+          <li>Azure Functions — event-driven serverless</li>
+          <li>Azure Monitor, Log Analytics, Application Insights</li>
+          <li>Azure DevOps — pipelines, repos, boards</li>
+          <li>Azure Networking — VPN Gateway, ExpressRoute</li>
+        </ul></div>
+        <div class="mod-hands"><h5>✅ Hands-on</h5><ul>
+          <li>Deploy AKS cluster with ACR integration</li>
+          <li>Build Azure DevOps pipeline</li>
+          <li>Configure Azure Monitor dashboards</li>
+          <li>Set up Azure AD RBAC</li>
+        </ul></div>
+      </div></div>
+    </div>
+
+    <div class="mod-item">
+      <div class="mod-hdr" onclick="togMod(this)"><div class="mod-hdr-l"><span class="mod-num">Module 4:</span><h4>GCP Deep Dive — Core Services</h4></div><div class="mod-meta"><span>9 Topics</span><span class="mod-arrow">▾</span></div></div>
+      <div class="mod-body"><div class="mod-content">
+        <div class="mod-topics"><h5>📋 Topics</h5><ul>
+          <li>GCP networking — VPC, subnets, firewall rules</li>
+          <li>Compute Engine — VMs, instance templates, MIGs</li>
+          <li>GKE — Autopilot vs Standard clusters</li>
+          <li>Cloud Storage — buckets, objects, lifecycle</li>
+          <li>Cloud SQL &amp; Firestore database services</li>
+          <li>Cloud Functions &amp; Cloud Run</li>
+          <li>Cloud Build — CI/CD pipelines on GCP</li>
+          <li>IAM &amp; Service Accounts</li>
+          <li>Cloud Monitoring &amp; Logging (Cloud Operations)</li>
+        </ul></div>
+        <div class="mod-hands"><h5>✅ Hands-on</h5><ul>
+          <li>Deploy GKE cluster with Cloud Build</li>
+          <li>Build Cloud Functions for automation</li>
+          <li>Set up GCP monitoring dashboards</li>
+          <li>Cross-cloud networking exercise</li>
+        </ul></div>
+      </div></div>
+    </div>
+
+    <div class="mod-item">
+      <div class="mod-hdr" onclick="togMod(this)"><div class="mod-hdr-l"><span class="mod-num">Module 5:</span><h4>Terraform Multi-Cloud IaC</h4></div><div class="mod-meta"><span>9 Topics</span><span class="mod-arrow">▾</span></div></div>
+      <div class="mod-body"><div class="mod-content">
+        <div class="mod-topics"><h5>📋 Topics</h5><ul>
+          <li>Terraform fundamentals — providers, resources, data sources</li>
+          <li>AWS Provider — VPC, EKS, RDS, S3 modules</li>
+          <li>Azure Provider — AKS, VNet, storage modules</li>
+          <li>GCP Provider — GKE, networking modules</li>
+          <li>Terraform state management — S3 + DynamoDB</li>
+          <li>Reusable module design &amp; versioning</li>
+          <li>Terraform workspace strategy for environments</li>
+          <li>Terragrunt for DRY configuration</li>
+          <li>Terraform in CI/CD pipelines (Atlantis)</li>
+        </ul></div>
+        <div class="mod-hands"><h5>✅ Hands-on</h5><ul>
+          <li>Write Terraform for AWS + Azure + GCP</li>
+          <li>Build reusable module library</li>
+          <li>Multi-environment IaC deployments</li>
+          <li>Terraform CI/CD pipeline setup</li>
+        </ul></div>
+      </div></div>
+    </div>
+
+    <div class="mod-item">
+      <div class="mod-hdr" onclick="togMod(this)"><div class="mod-hdr-l"><span class="mod-num">Module 6:</span><h4>Kubernetes on All 3 Clouds (EKS/AKS/GKE)</h4></div><div class="mod-meta"><span>8 Topics</span><span class="mod-arrow">▾</span></div></div>
+      <div class="mod-body"><div class="mod-content">
+        <div class="mod-topics"><h5>📋 Topics</h5><ul>
+          <li>EKS vs AKS vs GKE — feature comparison</li>
+          <li>Cluster provisioning on each cloud platform</li>
+          <li>Helm chart deployment across clouds</li>
+          <li>Cross-cloud service mesh with Istio</li>
+          <li>Multi-cluster management strategies</li>
+          <li>Cloud-specific storage classes &amp; PVs</li>
+          <li>Node pool management &amp; auto-scaling</li>
+          <li>ArgoCD multi-cluster GitOps</li>
+        </ul></div>
+        <div class="mod-hands"><h5>✅ Hands-on</h5><ul>
+          <li>Deploy same app on EKS, AKS &amp; GKE</li>
+          <li>Configure cross-cloud traffic routing</li>
+          <li>Helm chart standardization across clouds</li>
+          <li>ArgoCD managing 3 clusters simultaneously</li>
+        </ul></div>
+      </div></div>
+    </div>
+
+    <div class="mod-item">
+      <div class="mod-hdr" onclick="togMod(this)"><div class="mod-hdr-l"><span class="mod-num">Module 7:</span><h4>Multi-Cloud CI/CD Pipelines</h4></div><div class="mod-meta"><span>7 Topics</span><span class="mod-arrow">▾</span></div></div>
+      <div class="mod-body"><div class="mod-content">
+        <div class="mod-topics"><h5>📋 Topics</h5><ul>
+          <li>GitHub Actions for multi-cloud deployments</li>
+          <li>Azure Pipelines for AKS deployments</li>
+          <li>Cloud Build for GKE deployments</li>
+          <li>Cross-cloud artifact promotion strategies</li>
+          <li>Pipeline security — OIDC federation (no static keys)</li>
+          <li>Environment-based deployment gates</li>
+          <li>Multi-cloud GitOps with ArgoCD ApplicationSets</li>
+        </ul></div>
+        <div class="mod-hands"><h5>✅ Hands-on</h5><ul>
+          <li>Deploy to all 3 clouds from one pipeline</li>
+          <li>OIDC-based secure cloud authentication</li>
+          <li>Cross-cloud canary deployment</li>
+          <li>ArgoCD ApplicationSet for multi-cloud</li>
+        </ul></div>
+      </div></div>
+    </div>
+
+    <div class="mod-item">
+      <div class="mod-hdr" onclick="togMod(this)"><div class="mod-hdr-l"><span class="mod-num">Module 8:</span><h4>Cloud Cost Optimization &amp; FinOps</h4></div><div class="mod-meta"><span>6 Topics</span><span class="mod-arrow">▾</span></div></div>
+      <div class="mod-body"><div class="mod-content">
+        <div class="mod-topics"><h5>📋 Topics</h5><ul>
+          <li>AWS Cost Explorer, Savings Plans, Reserved Instances</li>
+          <li>Azure Cost Management + spot VMs</li>
+          <li>GCP committed use discounts</li>
+          <li>Kubernetes cost optimization — Karpenter, Spot nodes</li>
+          <li>Tagging strategies for cost allocation</li>
+          <li>FinOps culture &amp; showback/chargeback models</li>
+        </ul></div>
+        <div class="mod-hands"><h5>✅ Hands-on</h5><ul>
+          <li>Build cost dashboards for all 3 clouds</li>
+          <li>Implement tagging enforcement policies</li>
+          <li>Karpenter node provisioning setup</li>
+          <li>Spot instance workload configuration</li>
+        </ul></div>
+      </div></div>
+    </div>
+
+    <div class="mod-item">
+      <div class="mod-hdr" onclick="togMod(this)"><div class="mod-hdr-l"><span class="mod-num">Module 9:</span><h4>Multi-Cloud Monitoring &amp; Security</h4></div><div class="mod-meta"><span>7 Topics</span><span class="mod-arrow">▾</span></div></div>
+      <div class="mod-body"><div class="mod-content">
+        <div class="mod-topics"><h5>📋 Topics</h5><ul>
+          <li>Centralized monitoring across AWS/Azure/GCP</li>
+          <li>Prometheus federation for multi-cloud metrics</li>
+          <li>Cloud-native security tools — GuardDuty, Defender, Security Command Center</li>
+          <li>CSPM — Cloud Security Posture Management</li>
+          <li>Identity federation across clouds</li>
+          <li>Network security — WAF, DDoS protection</li>
+          <li>Compliance automation — AWS Config, Azure Policy</li>
+        </ul></div>
+        <div class="mod-hands"><h5>✅ Hands-on</h5><ul>
+          <li>Unified Grafana dashboard for 3 clouds</li>
+          <li>Security posture assessment exercise</li>
+          <li>Cross-cloud identity federation setup</li>
+          <li>Compliance policy implementation</li>
+        </ul></div>
+      </div></div>
+    </div>
+
+    <div class="mod-item">
+      <div class="mod-hdr" onclick="togMod(this)"><div class="mod-hdr-l"><span class="mod-num">Module 10:</span><h4>🏆 Capstone — Multi-Cloud Production Deployment</h4></div><div class="mod-meta"><span>End-to-End</span><span class="mod-arrow">▾</span></div></div>
+      <div class="mod-body"><div class="mod-content">
+        <div class="mod-topics"><h5>📋 Project</h5><ul>
+          <li>Deploy real app simultaneously on AWS, Azure &amp; GCP</li>
+          <li>Full Terraform IaC for all 3 clouds</li>
+          <li>Unified CI/CD pipeline deploying to all targets</li>
+          <li>Global load balancing &amp; failover</li>
+          <li>Centralized monitoring, logging &amp; alerting</li>
+        </ul></div>
+        <div class="mod-hands"><h5>✅ Deliverables</h5><ul>
+          <li>Working app running on EKS + AKS + GKE</li>
+          <li>Complete multi-cloud Terraform codebase</li>
+          <li>Unified monitoring dashboard</li>
+          <li>Cost optimization report</li>
+          <li>Full project documentation</li>
+        </ul></div>
+      </div></div>
+    </div>
+
+    <div style="margin-top:24px;padding:24px;background:linear-gradient(135deg,rgba(255,153,0,.08),rgba(26,115,232,.06));border:1px solid rgba(255,153,0,.3);border-radius:var(--r);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
+      <div>
+        <div style="font-family:'Outfit';font-weight:800;font-size:1.1rem;color:var(--td);margin-bottom:4px">Multi-Cloud Engineering Program — ₹80,000</div>
+        <div style="font-size:.87rem;color:var(--tl)">12 Weeks · 10 Modules · 80+ Hours · 5 Projects · AWS + Azure + GCP</div>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <button onclick="openCourseDownload('multicloud')" style="padding:11px 22px;background:var(--w);border:2px solid #ff9900;color:#cc7700;border-radius:6px;font-family:'Outfit';font-weight:700;cursor:pointer">📄 Download Full Syllabus</button>
+        <button onclick="openCourseEnroll('Multi-Cloud Engineering (AWS+Azure+GCP)')" style="padding:11px 22px;background:var(--red);border:none;color:#fff;border-radius:6px;font-family:'Outfit';font-weight:700;cursor:pointer">🚀 Enroll Now</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== DEVSECOPS TAB ===================== -->
+  <div id="ctab-devsecops" class="course-tab-content" style="display:none">
+    <div class="course-detail-hero" style="background:linear-gradient(135deg,#1a0010,#8b0000,#c0392b);border-radius:var(--r);padding:32px;color:#fff;margin-bottom:28px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center">
+      <div>
+        <span style="background:rgba(255,255,255,.15);color:#fff;padding:3px 12px;border-radius:4px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px">Certification Program</span>
+        <h2 style="font-family:'Outfit';font-size:1.7rem;font-weight:900;margin:10px 0 8px">DevSecOps — Security Engineering Program</h2>
+        <p style="opacity:.85;font-size:.95rem;margin-bottom:14px">Integrate security into every phase of SDLC. Build pipelines that catch vulnerabilities before they reach production — the fastest-growing DevOps specialization.</p>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;font-size:.84rem">
+          <span>⭐ <strong>4.8/5</strong></span>
+          <span>🕐 <strong>10 Weeks · 60+ Hours</strong></span>
+          <span>🔒 <strong>4 Security Projects</strong></span>
+          <span>🎓 <strong>3 Certificates</strong></span>
+          <span>💰 <strong>₹80,000</strong></span>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;min-width:180px">
+        <button onclick="openCourseDownload('devsecops')" style="padding:12px 20px;background:#fff;color:var(--navy);border:none;border-radius:6px;font-family:'Outfit';font-weight:700;font-size:.9rem;cursor:pointer">📄 Download Curriculum</button>
+        <button onclick="openCourseEnroll('DevSecOps Security Engineering')" style="padding:12px 20px;background:var(--gold);color:var(--navy);border:none;border-radius:6px;font-family:'Outfit';font-weight:700;font-size:.9rem;cursor:pointer">🚀 Enroll Now</button>
+      </div>
+    </div>
+
+    <div style="background:var(--g50);border:1px solid var(--g200);border-radius:var(--r);padding:24px;margin-bottom:24px">
+      <h3 style="font-family:'Outfit';font-weight:700;color:var(--td);margin-bottom:16px">🛡️ Security Tools You Will Master</h3>
+      <div style="display:flex;flex-wrap:wrap;gap:10px">
+        <span class="course-tool-tag" style="background:rgba(192,57,43,.08);color:#c0392b;border-color:rgba(192,57,43,.2)">SonarQube (SAST)</span>
+        <span class="course-tool-tag" style="background:rgba(192,57,43,.08);color:#c0392b;border-color:rgba(192,57,43,.2)">Trivy (Container Scan)</span>
+        <span class="course-tool-tag" style="background:rgba(192,57,43,.08);color:#c0392b;border-color:rgba(192,57,43,.2)">Snyk</span>
+        <span class="course-tool-tag" style="background:rgba(192,57,43,.08);color:#c0392b;border-color:rgba(192,57,43,.2)">OWASP ZAP (DAST)</span>
+        <span class="course-tool-tag" style="background:rgba(192,57,43,.08);color:#c0392b;border-color:rgba(192,57,43,.2)">HashiCorp Vault</span>
+        <span class="course-tool-tag" style="background:rgba(192,57,43,.08);color:#c0392b;border-color:rgba(192,57,43,.2)">Falco (Runtime Security)</span>
+        <span class="course-tool-tag" style="background:rgba(192,57,43,.08);color:#c0392b;border-color:rgba(192,57,43,.2)">AWS Security Hub</span>
+        <span class="course-tool-tag" style="background:rgba(192,57,43,.08);color:#c0392b;border-color:rgba(192,57,43,.2)">Checkov (IaC Scan)</span>
+        <span class="course-tool-tag" style="background:rgba(192,57,43,.08);color:#c0392b;border-color:rgba(192,57,43,.2)">DefectDojo</span>
+        <span class="course-tool-tag" style="background:rgba(192,57,43,.08);color:#c0392b;border-color:rgba(192,57,43,.2)">GitHub Advanced Security</span>
+      </div>
+    </div>
+
+    <h3 style="font-family:'Outfit';font-size:1.2rem;font-weight:800;color:var(--td);margin-bottom:16px">📚 Complete Curriculum — 8 Modules</h3>
+
+    <div class="mod-item open">
+      <div class="mod-hdr" onclick="togMod(this)"><div class="mod-hdr-l"><span class="mod-num">Module 1:</span><h4>DevSecOps Foundations &amp; Shift-Left Security</h4></div><div class="mod-meta"><span>7 Topics</span><span class="mod-arrow">▾</span></div></div>
+      <div class="mod-body"><div class="mod-content">
+        <div class="mod-topics"><h5>📋 Topics</h5><ul>
+          <li>What is DevSecOps — security-as-code philosophy</li>
+          <li>Shift-left security — catching bugs early in SDLC</li>
+          <li>Security in CI/CD pipeline architecture</li>
+          <li>Threat modeling fundamentals</li>
+          <li>OWASP Top 10 web vulnerabilities</li>
+          <li>NIST Cybersecurity Framework</li>
+          <li>Security compliance — SOC2, ISO 27001, PCI-DSS overview</li>
+        </ul></div>
+        <div class="mod-hands"><h5>✅ Hands-on</h5><ul>
+          <li>Threat modeling exercise on sample app</li>
+          <li>OWASP vulnerability identification lab</li>
+          <li>Design a DevSecOps pipeline architecture</li>
+        </ul></div>
+      </div></div>
+    </div>
+
+    <div class="mod-item">
+      <div class="mod-hdr" onclick="togMod(this)"><div class="mod-hdr-l"><span class="mod-num">Module 2:</span><h4>SAST — Static Application Security Testing</h4></div><div class="mod-meta"><span>8 Topics</span><span class="mod-arrow">▾</span></div></div>
+      <div class="mod-body"><div class="mod-content">
+        <div class="mod-topics"><h5>📋 Topics</h5><ul>
+          <li>SAST concepts — analyzing source code without execution</li>
+          <li>SonarQube — setup, quality gates, rules</li>
+          <li>SonarQube integration with Jenkins &amp; GitHub Actions</li>
+          <li>Code smell, technical debt, security hotspots</li>
+          <li>Semgrep — lightweight code scanning</li>
+          <li>GitHub Advanced Security — code scanning</li>
+          <li>Secret scanning in repositories</li>
+          <li>Interpreting &amp; triaging SAST findings</li>
+        </ul></div>
+        <div class="mod-hands"><h5>✅ Hands-on</h5><ul>
+          <li>Install SonarQube on Docker</li>
+          <li>Integrate SonarQube in CI pipeline</li>
+          <li>Configure quality gates to block deployment</li>
+          <li>Fix real SAST findings in sample app</li>
+        </ul></div>
+      </div></div>
+    </div>
+
+    <div class="mod-item">
+      <div class="mod-hdr" onclick="togMod(this)"><div class="mod-hdr-l"><span class="mod-num">Module 3:</span><h4>Container &amp; Image Security</h4></div><div class="mod-meta"><span>7 Topics</span><span class="mod-arrow">▾</span></div></div>
+      <div class="mod-body"><div class="mod-content">
+        <div class="mod-topics"><h5>📋 Topics</h5><ul>
+          <li>Docker security best practices — non-root, read-only, capabilities</li>
+          <li>Trivy — container image vulnerability scanning</li>
+          <li>Snyk container scanning &amp; monitoring</li>
+          <li>Base image selection &amp; hardening (Alpine, distroless)</li>
+          <li>ECR image scanning with AWS Inspector</li>
+          <li>Container admission policies — OPA Gatekeeper</li>
+          <li>Runtime security with Falco</li>
+        </ul></div>
+        <div class="mod-hands"><h5>✅ Hands-on</h5><ul>
+          <li>Trivy scan automation in GitHub Actions</li>
+          <li>Configure Falco rules for runtime detection</li>
+          <li>OPA policy to block privileged containers</li>
+          <li>Harden Docker images — reduce vulnerabilities by 80%</li>
+        </ul></div>
+      </div></div>
+    </div>
+
+    <div class="mod-item">
+      <div class="mod-hdr" onclick="togMod(this)"><div class="mod-hdr-l"><span class="mod-num">Module 4:</span><h4>DAST — Dynamic Application Security Testing</h4></div><div class="mod-meta"><span>6 Topics</span><span class="mod-arrow">▾</span></div></div>
+      <div class="mod-body"><div class="mod-content">
+        <div class="mod-topics"><h5>📋 Topics</h5><ul>
+          <li>DAST concepts — testing running applications</li>
+          <li>OWASP ZAP — active scanning &amp; passive scanning</li>
+          <li>ZAP in CI/CD — automated DAST in pipelines</li>
+          <li>Burp Suite basics for manual testing</li>
+          <li>API security testing</li>
+          <li>DAST findings interpretation &amp; triage</li>
+        </ul></div>
+        <div class="mod-hands"><h5>✅ Hands-on</h5><ul>
+          <li>Run OWASP ZAP against DVWA (vulnerable app)</li>
+          <li>Integrate ZAP scan in CI/CD pipeline</li>
+          <li>Fix SQL injection &amp; XSS vulnerabilities</li>
+          <li>API security testing exercise</li>
+        </ul></div>
+      </div></div>
+    </div>
+
+    <div class="mod-item">
+      <div class="mod-hdr" onclick="togMod(this)"><div class="mod-hdr-l"><span class="mod-num">Module 5:</span><h4>Secrets Management — HashiCorp Vault</h4></div><div class="mod-meta"><span>7 Topics</span><span class="mod-arrow">▾</span></div></div>
+      <div class="mod-body"><div class="mod-content">
+        <div class="mod-topics"><h5>📋 Topics</h5><ul>
+          <li>Why secrets management matters — credential sprawl risks</li>
+          <li>HashiCorp Vault architecture &amp; auth methods</li>
+          <li>Vault secrets engines — KV, database, PKI, AWS</li>
+          <li>Dynamic secrets generation</li>
+          <li>Vault Agent &amp; Kubernetes integration</li>
+          <li>AWS Secrets Manager &amp; SSM Parameter Store</li>
+          <li>Secret scanning — detect hardcoded secrets in code</li>
+        </ul></div>
+        <div class="mod-hands"><h5>✅ Hands-on</h5><ul>
+          <li>Install &amp; configure HashiCorp Vault on K8s</li>
+          <li>Inject Vault secrets into pods automatically</li>
+          <li>Generate dynamic database credentials</li>
+          <li>Set up PKI for internal certificates</li>
+        </ul></div>
+      </div></div>
+    </div>
+
+    <div class="mod-item">
+      <div class="mod-hdr" onclick="togMod(this)"><div class="mod-hdr-l"><span class="mod-num">Module 6:</span><h4>IaC Security &amp; Compliance as Code</h4></div><div class="mod-meta"><span>6 Topics</span><span class="mod-arrow">▾</span></div></div>
+      <div class="mod-body"><div class="mod-content">
+        <div class="mod-topics"><h5>📋 Topics</h5><ul>
+          <li>IaC security scanning — Checkov, tfsec, terrascan</li>
+          <li>AWS Config Rules — compliance automation</li>
+          <li>Open Policy Agent (OPA) — policy as code</li>
+          <li>Kubernetes security policies — Pod Security Standards</li>
+          <li>Network policies — default deny, microsegmentation</li>
+          <li>CIS Benchmarks for cloud &amp; Kubernetes</li>
+        </ul></div>
+        <div class="mod-hands"><h5>✅ Hands-on</h5><ul>
+          <li>Run Checkov on Terraform codebase</li>
+          <li>Write OPA policies for K8s admission</li>
+          <li>Configure AWS Config rules for compliance</li>
+          <li>CIS benchmark assessment exercise</li>
+        </ul></div>
+      </div></div>
+    </div>
+
+    <div class="mod-item">
+      <div class="mod-hdr" onclick="togMod(this)"><div class="mod-hdr-l"><span class="mod-num">Module 7:</span><h4>Cloud Security — AWS Security Services</h4></div><div class="mod-meta"><span>7 Topics</span><span class="mod-arrow">▾</span></div></div>
+      <div class="mod-body"><div class="mod-content">
+        <div class="mod-topics"><h5>📋 Topics</h5><ul>
+          <li>AWS GuardDuty — threat detection</li>
+          <li>AWS Security Hub — centralized findings</li>
+          <li>AWS Inspector — vulnerability assessment</li>
+          <li>AWS IAM Security — least privilege, SCPs</li>
+          <li>VPC Security — flow logs, WAF, Shield</li>
+          <li>AWS CloudTrail — audit logging</li>
+          <li>Incident response runbooks on AWS</li>
+        </ul></div>
+        <div class="mod-hands"><h5>✅ Hands-on</h5><ul>
+          <li>Enable &amp; configure GuardDuty</li>
+          <li>Security Hub findings investigation</li>
+          <li>IAM access analyzer review</li>
+          <li>WAF rules for web application protection</li>
+        </ul></div>
+      </div></div>
+    </div>
+
+    <div class="mod-item">
+      <div class="mod-hdr" onclick="togMod(this)"><div class="mod-hdr-l"><span class="mod-num">Module 8:</span><h4>🏆 Capstone — End-to-End Secure DevSecOps Pipeline</h4></div><div class="mod-meta"><span>End-to-End</span><span class="mod-arrow">▾</span></div></div>
+      <div class="mod-body"><div class="mod-content">
+        <div class="mod-topics"><h5>📋 Project</h5><ul>
+          <li>Build complete secure CI/CD pipeline</li>
+          <li>SonarQube SAST → Trivy scan → OWASP ZAP DAST</li>
+          <li>Vault secrets management integration</li>
+          <li>OPA admission policies on Kubernetes</li>
+          <li>Security dashboard with DefectDojo</li>
+        </ul></div>
+        <div class="mod-hands"><h5>✅ Deliverables</h5><ul>
+          <li>Complete DevSecOps pipeline codebase</li>
+          <li>Security gate configuration</li>
+          <li>Vulnerability management dashboard</li>
+          <li>Security runbook documentation</li>
+          <li>Compliance report</li>
+        </ul></div>
+      </div></div>
+    </div>
+
+    <div style="margin-top:24px;padding:24px;background:linear-gradient(135deg,rgba(192,57,43,.06),rgba(26,115,232,.06));border:1px solid rgba(192,57,43,.2);border-radius:var(--r);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
+      <div>
+        <div style="font-family:'Outfit';font-weight:800;font-size:1.1rem;color:var(--td);margin-bottom:4px">DevSecOps Security Engineering — ₹80,000</div>
+        <div style="font-size:.87rem;color:var(--tl)">10 Weeks · 8 Modules · 60+ Hours · 4 Projects · 100% Placement Assurance</div>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <button onclick="openCourseDownload('devsecops')" style="padding:11px 22px;background:var(--w);border:2px solid #c0392b;color:#c0392b;border-radius:6px;font-family:'Outfit';font-weight:700;cursor:pointer">📄 Download Full Syllabus</button>
+        <button onclick="openCourseEnroll('DevSecOps Security Engineering')" style="padding:11px 22px;background:var(--red);border:none;color:#fff;border-radius:6px;font-family:'Outfit';font-weight:700;cursor:pointer">🚀 Enroll Now</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== SRE TAB ===================== -->
+  <div id="ctab-sre" class="course-tab-content" style="display:none">
+    <div class="course-detail-hero" style="background:linear-gradient(135deg,#002010,#00a048,#00c9a7);border-radius:var(--r);padding:32px;color:#fff;margin-bottom:28px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center">
+      <div>
+        <span style="background:rgba(255,255,255,.15);color:#fff;padding:3px 12px;border-radius:4px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px">Advanced Specialization</span>
+        <h2 style="font-family:'Outfit';font-size:1.7rem;font-weight:900;margin:10px 0 8px">SRE — Site Reliability Engineering</h2>
+        <p style="opacity:.85;font-size:.95rem;margin-bottom:14px">Operate production systems at scale with Google-pioneered SRE principles. SLOs, error budgets, chaos engineering, and incident management — the highest-paying DevOps specialization.</p>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;font-size:.84rem">
+          <span>⭐ <strong>4.8/5</strong></span>
+          <span>🕐 <strong>8 Weeks · 50+ Hours</strong></span>
+          <span>📊 <strong>3 Projects</strong></span>
+          <span>🎓 <strong>3 Certificates</strong></span>
+          <span>💰 <strong>₹80,000</strong></span>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;min-width:180px">
+        <button onclick="openCourseDownload('sre')" style="padding:12px 20px;background:#fff;color:var(--navy);border:none;border-radius:6px;font-family:'Outfit';font-weight:700;font-size:.9rem;cursor:pointer">📄 Download Curriculum</button>
+        <button onclick="openCourseEnroll('SRE Site Reliability Engineering')" style="padding:12px 20px;background:var(--red);color:#fff;border:none;border-radius:6px;font-family:'Outfit';font-weight:700;font-size:.9rem;cursor:pointer">🚀 Enroll Now</button>
+      </div>
+    </div>
+
+    <div style="background:var(--g50);border:1px solid var(--g200);border-radius:var(--r);padding:24px;margin-bottom:24px">
+      <h3 style="font-family:'Outfit';font-weight:700;color:var(--td);margin-bottom:16px">📊 SRE Tools &amp; Platforms You Will Master</h3>
+      <div style="display:flex;flex-wrap:wrap;gap:10px">
+        <span class="course-tool-tag" style="background:rgba(0,201,167,.08);color:#00856e;border-color:rgba(0,201,167,.25)">Prometheus</span>
+        <span class="course-tool-tag" style="background:rgba(0,201,167,.08);color:#00856e;border-color:rgba(0,201,167,.25)">Grafana</span>
+        <span class="course-tool-tag" style="background:rgba(0,201,167,.08);color:#00856e;border-color:rgba(0,201,167,.25)">PagerDuty</span>
+        <span class="course-tool-tag" style="background:rgba(0,201,167,.08);color:#00856e;border-color:rgba(0,201,167,.25)">Datadog</span>
+        <span class="course-tool-tag" style="background:rgba(0,201,167,.08);color:#00856e;border-color:rgba(0,201,167,.25)">Chaos Monkey / LitmusChaos</span>
+        <span class="course-tool-tag" style="background:rgba(0,201,167,.08);color:#00856e;border-color:rgba(0,201,167,.25)">ELK Stack</span>
+        <span class="course-tool-tag" style="background:rgba(0,201,167,.08);color:#00856e;border-color:rgba(0,201,167,.25)">Jaeger (Tracing)</span>
+        <span class="course-tool-tag" style="background:rgba(0,201,167,.08);color:#00856e;border-color:rgba(0,201,167,.25)">OpenTelemetry</span>
+        <span class="course-tool-tag" style="background:rgba(0,201,167,.08);color:#00856e;border-color:rgba(0,201,167,.25)">VictoriaMetrics</span>
+      </div>
+    </div>
+
+    <h3 style="font-family:'Outfit';font-size:1.2rem;font-weight:800;color:var(--td);margin-bottom:16px">📚 Complete Curriculum — 7 Modules</h3>
+
+    <div class="mod-item open">
+      <div class="mod-hdr" onclick="togMod(this)"><div class="mod-hdr-l"><span class="mod-num">Module 1:</span><h4>SRE Fundamentals &amp; Google SRE Principles</h4></div><div class="mod-meta"><span>8 Topics</span><span class="mod-arrow">▾</span></div></div>
+      <div class="mod-body"><div class="mod-content">
+        <div class="mod-topics"><h5>📋 Topics</h5><ul>
+          <li>SRE vs DevOps — what's different &amp; why it matters</li>
+          <li>Google SRE book — key principles &amp; practices</li>
+          <li>Reliability as a feature — business impact</li>
+          <li>SLI, SLO, SLA definitions &amp; differences</li>
+          <li>Error budgets — concept &amp; policy</li>
+          <li>Toil identification &amp; reduction</li>
+          <li>SRE team structure &amp; responsibilities</li>
+          <li>Production readiness reviews (PRR)</li>
+        </ul></div>
+        <div class="mod-hands"><h5>✅ Hands-on</h5><ul>
+          <li>Define SLIs for a sample service</li>
+          <li>Calculate error budget for 99.9% SLO</li>
+          <li>Toil identification exercise</li>
+          <li>Create a production readiness checklist</li>
+        </ul></div>
+      </div></div>
+    </div>
+
+    <div class="mod-item">
+      <div class="mod-hdr" onclick="togMod(this)"><div class="mod-hdr-l"><span class="mod-num">Module 2:</span><h4>SLOs, SLIs &amp; Error Budget Implementation</h4></div><div class="mod-meta"><span>7 Topics</span><span class="mod-arrow">▾</span></div></div>
+      <div class="mod-body"><div class="mod-content">
+        <div class="mod-topics"><h5>📋 Topics</h5><ul>
+          <li>Defining meaningful SLIs — availability, latency, throughput</li>
+          <li>Prometheus recording rules for SLI measurement</li>
+          <li>Error budget calculation &amp; burn rate analysis</li>
+          <li>Fast-burn vs slow-burn alerting strategies</li>
+          <li>Grafana SLO dashboards</li>
+          <li>Multi-window, multi-burn-rate alerting</li>
+          <li>Error budget policy — when to stop feature releases</li>
+        </ul></div>
+        <div class="mod-hands"><h5>✅ Hands-on</h5><ul>
+          <li>Write Prometheus recording rules for SLIs</li>
+          <li>Build Grafana SLO dashboard from scratch</li>
+          <li>Configure burn rate alerts</li>
+          <li>Error budget tracking report</li>
+        </ul></div>
+      </div></div>
+    </div>
+
+    <div class="mod-item">
+      <div class="mod-hdr" onclick="togMod(this)"><div class="mod-hdr-l"><span class="mod-num">Module 3:</span><h4>Advanced Monitoring &amp; Observability</h4></div><div class="mod-meta"><span>9 Topics</span><span class="mod-arrow">▾</span></div></div>
+      <div class="mod-body"><div class="mod-content">
+        <div class="mod-topics"><h5>📋 Topics</h5><ul>
+          <li>The Three Pillars — Metrics, Logs, Traces</li>
+          <li>OpenTelemetry — unified observability standard</li>
+          <li>Distributed tracing with Jaeger</li>
+          <li>Structured logging best practices</li>
+          <li>EFK Stack — Elasticsearch, Fluentd, Kibana</li>
+          <li>Prometheus advanced — federation, remote write</li>
+          <li>Datadog — APM, infrastructure monitoring</li>
+          <li>Synthetic monitoring &amp; uptime checks</li>
+          <li>Capacity planning with metrics</li>
+        </ul></div>
+        <div class="mod-hands"><h5>✅ Hands-on</h5><ul>
+          <li>Instrument app with OpenTelemetry</li>
+          <li>Set up distributed tracing with Jaeger</li>
+          <li>Build EFK stack on Kubernetes</li>
+          <li>Create capacity planning dashboards</li>
+        </ul></div>
+      </div></div>
+    </div>
+
+    <div class="mod-item">
+      <div class="mod-hdr" onclick="togMod(this)"><div class="mod-hdr-l"><span class="mod-num">Module 4:</span><h4>Incident Management &amp; On-Call</h4></div><div class="mod-meta"><span>8 Topics</span><span class="mod-arrow">▾</span></div></div>
+      <div class="mod-body"><div class="mod-content">
+        <div class="mod-topics"><h5>📋 Topics</h5><ul>
+          <li>Incident management lifecycle — detection to resolution</li>
+          <li>Severity classification — P1 / P2 / P3 / P4</li>
+          <li>On-call rotation &amp; escalation policies</li>
+          <li>PagerDuty setup — services, schedules, escalations</li>
+          <li>Runbooks — writing effective operational guides</li>
+          <li>Postmortem culture — blameless &amp; action-oriented</li>
+          <li>MTTR reduction strategies</li>
+          <li>GameDay exercises — testing incident response</li>
+        </ul></div>
+        <div class="mod-hands"><h5>✅ Hands-on</h5><ul>
+          <li>Configure PagerDuty end-to-end</li>
+          <li>Write production runbooks</li>
+          <li>Simulate incident &amp; run postmortem</li>
+          <li>GameDay exercise with real failure injection</li>
+        </ul></div>
+      </div></div>
+    </div>
+
+    <div class="mod-item">
+      <div class="mod-hdr" onclick="togMod(this)"><div class="mod-hdr-l"><span class="mod-num">Module 5:</span><h4>Chaos Engineering</h4></div><div class="mod-meta"><span>7 Topics</span><span class="mod-arrow">▾</span></div></div>
+      <div class="mod-body"><div class="mod-content">
+        <div class="mod-topics"><h5>📋 Topics</h5><ul>
+          <li>Chaos engineering principles — hypothesis-driven experiments</li>
+          <li>Chaos Monkey &amp; Netflix chaos tools</li>
+          <li>LitmusChaos — chaos on Kubernetes</li>
+          <li>Designing chaos experiments — steady state hypothesis</li>
+          <li>Network chaos — latency, packet loss, partition</li>
+          <li>Pod &amp; node failure experiments</li>
+          <li>Chaos engineering in CI/CD pipelines</li>
+        </ul></div>
+        <div class="mod-hands"><h5>✅ Hands-on</h5><ul>
+          <li>Install LitmusChaos on EKS cluster</li>
+          <li>Run pod deletion experiments</li>
+          <li>Network latency injection experiment</li>
+          <li>Chaos GameDay on production-like environment</li>
+        </ul></div>
+      </div></div>
+    </div>
+
+    <div class="mod-item">
+      <div class="mod-hdr" onclick="togMod(this)"><div class="mod-hdr-l"><span class="mod-num">Module 6:</span><h4>Reliability Engineering — Performance &amp; Scalability</h4></div><div class="mod-meta"><span>7 Topics</span><span class="mod-arrow">▾</span></div></div>
+      <div class="mod-body"><div class="mod-content">
+        <div class="mod-topics"><h5>📋 Topics</h5><ul>
+          <li>Performance testing — k6, JMeter, Gatling</li>
+          <li>Load testing &amp; stress testing in CI/CD</li>
+          <li>Auto-scaling strategies — HPA, KEDA, Karpenter</li>
+          <li>Database reliability — connection pooling, read replicas</li>
+          <li>Caching strategies — Redis, CDN, application-level</li>
+          <li>Circuit breakers &amp; retry patterns</li>
+          <li>Graceful degradation &amp; fallback patterns</li>
+        </ul></div>
+        <div class="mod-hands"><h5>✅ Hands-on</h5><ul>
+          <li>Load test app with k6 in CI pipeline</li>
+          <li>Configure KEDA event-driven scaling</li>
+          <li>Implement circuit breaker pattern</li>
+          <li>Redis caching layer setup</li>
+        </ul></div>
+      </div></div>
+    </div>
+
+    <div class="mod-item">
+      <div class="mod-hdr" onclick="togMod(this)"><div class="mod-hdr-l"><span class="mod-num">Module 7:</span><h4>🏆 Capstone — Full SRE Implementation on Production</h4></div><div class="mod-meta"><span>End-to-End</span><span class="mod-arrow">▾</span></div></div>
+      <div class="mod-body"><div class="mod-content">
+        <div class="mod-topics"><h5>📋 Project</h5><ul>
+          <li>Complete SLO tracking setup for real service</li>
+          <li>Prometheus + Grafana observability stack</li>
+          <li>PagerDuty on-call rotation configured</li>
+          <li>Chaos engineering experiments designed &amp; run</li>
+          <li>Full incident response simulation</li>
+        </ul></div>
+        <div class="mod-hands"><h5>✅ Deliverables</h5><ul>
+          <li>SLO dashboard with error budget tracking</li>
+          <li>On-call runbooks (3+ services)</li>
+          <li>Chaos engineering experiment results</li>
+          <li>Performance test report with analysis</li>
+          <li>Postmortem documentation</li>
+        </ul></div>
+      </div></div>
+    </div>
+
+    <div style="margin-top:24px;padding:24px;background:linear-gradient(135deg,rgba(0,201,167,.06),rgba(26,115,232,.06));border:1px solid rgba(0,201,167,.25);border-radius:var(--r);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
+      <div>
+        <div style="font-family:'Outfit';font-weight:800;font-size:1.1rem;color:var(--td);margin-bottom:4px">SRE — Site Reliability Engineering — ₹80,000</div>
+        <div style="font-size:.87rem;color:var(--tl)">8 Weeks · 7 Modules · 50+ Hours · 3 Projects · Highest Paying DevOps Role</div>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <button onclick="openCourseDownload('sre')" style="padding:11px 22px;background:var(--w);border:2px solid #00a048;color:#00a048;border-radius:6px;font-family:'Outfit';font-weight:700;cursor:pointer">📄 Download Full Syllabus</button>
+        <button onclick="openCourseEnroll('SRE Site Reliability Engineering')" style="padding:11px 22px;background:var(--red);border:none;color:#fff;border-radius:6px;font-family:'Outfit';font-weight:700;cursor:pointer">🚀 Enroll Now</button>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end .container -->
+</div><!-- end #page-courses -->
+
+<!-- ====================================================
+     COURSE DOWNLOAD MODAL (separate from existing dlMod)
 <!-- =============================== -->
 <!-- PAGE: PLACEMENTS -->
 <!-- =============================== -->
@@ -2431,6 +3487,167 @@ document.querySelectorAll('.fade-in').forEach(function(el){obs.observe(el);});
 
 // Init blog on page load
 renderBlogList(null);
+/* ---- Course Tab Switcher ---- */
+function showCourseTab(tab, el) {
+  // Hide all tabs
+  document.querySelectorAll('.course-tab-content').forEach(function(t){ t.style.display = 'none'; });
+  // Show selected
+  var target = document.getElementById('ctab-' + tab);
+  if (target) target.style.display = 'block';
+  // Update pill active state
+  if (el) {
+    document.querySelectorAll('.cat-pill').forEach(function(p){ p.classList.remove('active'); });
+    el.classList.add('active');
+  } else {
+    // Called programmatically (from card click) — find and activate pill
+    document.querySelectorAll('.cat-pill').forEach(function(p){ p.classList.remove('active'); });
+    document.querySelectorAll('.cat-pill').forEach(function(p){
+      if (p.getAttribute('onclick') && p.getAttribute('onclick').indexOf("'" + tab + "'") > -1) {
+        p.classList.add('active');
+      }
+    });
+  }
+  // Scroll to top of courses section
+  var pg = document.getElementById('page-courses');
+  if (pg) pg.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+/* ---- Course Download Modal ---- */
+var _cdlCourseKey = 'devops';
+var _cdlCourseName = 'DevOps Engineering';
+var _cdlTitles = {
+  devops: 'DevOps Engineering',
+  multicloud: 'Multi-Cloud Engineering (AWS+Azure+GCP)',
+  devsecops: 'DevSecOps Security Engineering',
+  sre: 'SRE — Site Reliability Engineering'
+};
+
+function openCourseDownload(courseKey) {
+  _cdlCourseKey = courseKey;
+  _cdlCourseName = _cdlTitles[courseKey] || courseKey;
+  document.getElementById('cdl-title').textContent = '📄 Download Curriculum — ' + _cdlCourseName;
+  document.getElementById('cdl-course-key').value = courseKey;
+  document.getElementById('cdl-course-name').value = _cdlCourseName;
+  document.getElementById('courseDlMod').classList.add('show');
+}
+
+function handleCourseDl(e) {
+  e.preventDefault();
+  var name   = document.getElementById('cdl-name').value;
+  var phone  = document.getElementById('cdl-phone').value;
+  var email  = document.getElementById('cdl-email').value;
+  var country= document.getElementById('cdl-country').value;
+  var course = document.getElementById('cdl-course-name').value;
+  var msg = '📄 *Curriculum Download Request — AnilCloudLab*\n\n'
+    + 'Name: '    + name    + '\n'
+    + 'Phone: '   + phone   + '\n'
+    + 'Email: '   + email   + '\n'
+    + 'Country: ' + country + '\n'
+    + 'Course: '  + course  + '\n\n'
+    + 'Please send me the full curriculum PDF. Thank you!';
+  window.open('https://wa.me/917993822600?text=' + encodeURIComponent(msg), '_blank');
+  document.getElementById('cdl-btn').textContent = '✅ Sent! Closing...';
+  setTimeout(function(){
+    document.getElementById('cdl-btn').textContent = '📄 Send Curriculum on WhatsApp';
+    closeMod('courseDlMod');
+    // Reset form
+    document.getElementById('cdl-name').value  = '';
+    document.getElementById('cdl-phone').value = '';
+    document.getElementById('cdl-email').value = '';
+    document.getElementById('cdl-country').value = '';
+  }, 2000);
+}
+
+/* ---- Course Enroll Modal ---- */
+function openCourseEnroll(courseName) {
+  document.getElementById('ce-title').textContent = '🚀 Enroll — ' + courseName;
+  document.getElementById('ce-course-name').value = courseName;
+  document.getElementById('courseEnrollMod').classList.add('show');
+}
+
+function handleCourseEnroll(e) {
+  e.preventDefault();
+  var name   = document.getElementById('ce-name').value;
+  var phone  = document.getElementById('ce-phone').value;
+  var email  = document.getElementById('ce-email').value;
+  var country= document.getElementById('ce-country').value;
+  var bg     = document.getElementById('ce-bg').value;
+  var course = document.getElementById('ce-course-name').value;
+  var msg = '🎓 *New Enrollment — AnilCloudLab*\n\n'
+    + 'Name: '       + name    + '\n'
+    + 'Phone: '      + phone   + '\n'
+    + 'Email: '      + email   + '\n'
+    + 'Country: '    + country + '\n'
+    + 'Course: '     + course  + '\n'
+    + 'Background: ' + bg;
+  window.open('https://wa.me/917993822600?text=' + encodeURIComponent(msg), '_blank');
+  document.getElementById('ce-btn').textContent = '✅ Opening WhatsApp...';
+  setTimeout(function(){
+    document.getElementById('ce-btn').textContent = '🚀 Submit & Connect on WhatsApp';
+    closeMod('courseEnrollMod');
+    document.getElementById('ce-name').value    = '';
+    document.getElementById('ce-phone').value   = '';
+    document.getElementById('ce-email').value   = '';
+    document.getElementById('ce-country').value = '';
+    document.getElementById('ce-bg').value      = '';
+  }, 2500);
+}
+
 </script>
+<div class="modal-bg" id="courseDlMod">
+  <div class="modal">
+    <button class="modal-x" onclick="closeMod('courseDlMod')">&times;</button>
+    <h3 id="cdl-title">📄 Download Course Curriculum</h3>
+    <p class="md">Enter your details below — we'll send the PDF on WhatsApp instantly.</p>
+    <form onsubmit="handleCourseDl(event)">
+      <div class="fg"><label>Full Name *</label><input id="cdl-name" required placeholder="Your full name"></div>
+      <div class="fg"><label>Phone / WhatsApp *</label><input type="tel" id="cdl-phone" required placeholder="+91 XXXXX XXXXX"></div>
+      <div class="fg"><label>Email *</label><input type="email" id="cdl-email" required placeholder="you@example.com"></div>
+      <div class="fg"><label>Country *</label>
+        <select id="cdl-country" required>
+          <option value="">Select Country</option>
+          <option>India</option><option>Australia</option><option>United States</option>
+          <option>Canada</option><option>Singapore</option><option>Germany</option><option>Other</option>
+        </select>
+      </div>
+      <input type="hidden" id="cdl-course-key" value="">
+      <input type="hidden" id="cdl-course-name" value="">
+      <button type="submit" class="form-btn" id="cdl-btn">📄 Send Curriculum on WhatsApp</button>
+    </form>
+  </div>
+</div>
+
+<!-- COURSE ENROLL MODAL -->
+<div class="modal-bg" id="courseEnrollMod">
+  <div class="modal">
+    <button class="modal-x" onclick="closeMod('courseEnrollMod')">&times;</button>
+    <h3 id="ce-title">🚀 Enroll Now</h3>
+    <p class="md">Fill your details — our team will contact you within minutes on WhatsApp.</p>
+    <form onsubmit="handleCourseEnroll(event)">
+      <div class="fg"><label>Full Name *</label><input id="ce-name" required placeholder="Your full name"></div>
+      <div class="fg"><label>Phone / WhatsApp *</label><input type="tel" id="ce-phone" required placeholder="+91 XXXXX XXXXX"></div>
+      <div class="fg"><label>Email *</label><input type="email" id="ce-email" required placeholder="you@example.com"></div>
+      <div class="fr">
+        <div class="fg"><label>Country *</label>
+          <select id="ce-country" required>
+            <option value="">Select</option>
+            <option>India</option><option>Australia</option><option>United States</option>
+            <option>Canada</option><option>Singapore</option><option>Germany</option><option>Other</option>
+          </select>
+        </div>
+        <div class="fg"><label>Background</label>
+          <select id="ce-bg">
+            <option value="">Select</option>
+            <option>Student / Fresh Graduate</option><option>IT Professional</option>
+            <option>Domain Change (Non-IT)</option><option>Onsite Professional</option>
+          </select>
+        </div>
+      </div>
+      <input type="hidden" id="ce-course-name" value="">
+      <button type="submit" class="form-btn" id="ce-btn">🚀 Submit &amp; Connect on WhatsApp</button>
+    </form>
+  </div>
+</div>
+
 </body>
 </html>
